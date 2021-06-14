@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_78sdp"
+    android:background="@drawable/backgrow2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:id="@+id/Imicon"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:src="@drawable/clouds" />
+
+        <TextView
+
+            android:id="@+id/Tvtimehistory"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Imicon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_56sdp"
+            android:text="10:25"
+            android:textColor="@color/colorAccent2"
+            android:textSize="@dimen/_17sdp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Tvhistoryname"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Hà Nội"
+            android:textColor="@color/colorAccent2"
+            android:textSize="@dimen/_25sdp" />
+
+        <TextView
+            android:id="@+id/Tvtrangthaitt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Mưa rải rác"
+            android:textColor="@color/colorAccent2"
+            android:textSize="@dimen/_15sdp" />
+        <TextView
+            android:id="@+id/Tvdayandmonth"
+            android:textColor="@color/colorAccent2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20/10/2019"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Tvhistorynhietdo"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="27"
+            android:textColor="@color/colorAccent2"
+            android:textSize="@dimen/_34sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="o"
+            android:textColor="@color/colorAccent2"
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/Tvccc"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="C"
+            android:textColor="@color/colorAccent2"
+            android:textSize="@dimen/_34sdp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

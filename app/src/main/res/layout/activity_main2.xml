@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Activity.Activity_Seting">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/reltsetting"
+                android:background="@drawable/backgrowvuongtron"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp">
+                <TextView
+                    android:id="@+id/Tvsetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Cài đặt"
+                    android:textSize="@dimen/_20sdp"/>
+                <TextView
+                    android:id="@+id/Tvxong"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xong"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/Lnthoitiet"
+                android:layout_below="@+id/Imview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp">
+                <TextView
+                    android:id="@+id/Tvthoitietst"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textSize="@dimen/_17sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời Tiết"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/dongke21"
+                android:layout_below="@+id/Renhietdo"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:background="@drawable/backgrowvuongtron"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp">
+
+            </RelativeLayout>
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp">
+                <TextView
+                    android:id="@+id/Tvngonngust"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_17sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngôn Ngữ"/>
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/language1"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="wrap_content"
+                        android:text="English"/>
+                    <Button
+
+                        android:id="@+id/language2"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Vietnamese"/>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/dongke1"
+                android:layout_below="@+id/Lnthoitiet"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:background="@drawable/backgrowvuongtron"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+
+            <RelativeLayout
+                android:id="@+id/Renhietdo"
+                android:layout_below="@+id/dongke1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                >
+
+                <TextView
+                    android:id="@+id/Tvnhietdost"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:text="Nhiệt Độ "
+                    android:textSize="@dimen/_17sdp" />
+                <Button
+                    android:text="C"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:id="@+id/BtC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    />
+                <Button
+                    android:id="@+id/BtF"
+                    android:text="F"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_toLeftOf="@+id/BtC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/dongke2"
+                android:layout_below="@+id/Renhietdo"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:background="@drawable/backgrowvuongtron"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Lntocdogio"
+                android:layout_below="@+id/dongke2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/Tvtocdogio"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:text="Tốc độ gió "
+                    android:textSize="@dimen/_17sdp" />
+                <LinearLayout
+                    android:layout_below="@+id/Tvtocdogio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:id="@+id/Bttd1"
+                       android:textColorHint="@color/colorAccent4"
+                        android:hint="mph/h"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/Bttd2"
+                        android:textColorHint="@color/colorAccent4"
+                        android:hint="km/h"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/Bttd3"
+                        android:textColorHint="@color/colorAccent4"
+                        android:hint="m/s"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/dongke3"
+                android:layout_below="@+id/Lntocdogio"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:background="@drawable/backgrowvuongtron"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp">
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/Lnhistory"
+                android:layout_below="@+id/dongke3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                >
+                <TextView
+                    android:id="@+id/Tvlichsust"
+                    android:layout_marginLeft="@dimen/_12sdp"
+
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_17sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lịch sử"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/Lvhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/magehis">
+
+                </ListView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
