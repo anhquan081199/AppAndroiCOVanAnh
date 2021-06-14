@@ -52,7 +52,7 @@ public class DBHistory extends SQLiteOpenHelper {
         Log.d("DBManager", "onUpgrade: ");
     }
 
-    //Add new a student
+
     public void addHistory1(history historysql2){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -63,14 +63,12 @@ public class DBHistory extends SQLiteOpenHelper {
         values.put(NAME, historysql2.getName());
         values.put(TIME, historysql2.getTime());
         values.put(TEMPERATURE, historysql2.getTemperature());
-        //Neu de null thi khi value bang null thi loi
         db.insert(TABLE_NAME,null,values);
         db.close();
     }
 
     public ArrayList<history> getAllHistory() {
         ArrayList<history> listStudent = new ArrayList<history>();
-        // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

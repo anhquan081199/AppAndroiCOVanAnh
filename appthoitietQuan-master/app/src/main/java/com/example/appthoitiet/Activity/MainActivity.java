@@ -59,15 +59,12 @@ public class MainActivity extends AppCompatActivity{
     LinearLayout linearLayout, baonhapvao;
     TextView textView, Tvtemperature, Tvday, Tvplace, Tvwind, Tvweather, tvLocation, Tvdoam, Tvgioview, Tvthu;
 
-    // khai báo list tt thời tiết
     List<Contect> contacts = new ArrayList<>();
 
     List<Contect> contacts6time = new ArrayList<>();
 
-// cài đặt setting trước
     setting settingsql = new setting(2, 2, 3, 1);
 
-    //
     CombinedChart mChart;
     Json JSON = new Json();
     Weather weathertt = new Weather();
@@ -79,9 +76,7 @@ public class MainActivity extends AppCompatActivity{
     DBsetting dBsetting = new DBsetting(this);
     trangthaithoitiet ttthoitiet = new trangthaithoitiet();
     private Location location;
-    // Đối tượng tương tác với Google API
     private GoogleApiClient gac;
-    // Hiển thị vị trí
     private double latitude = 0;
     private double longitude = 0;
 
@@ -111,15 +106,10 @@ public class MainActivity extends AppCompatActivity{
         Tvdoam = findViewById(R.id.Tvdoam);
         Tvgioview = findViewById(R.id.Tvgioview);
         Tvthu = findViewById(R.id.Tvthu);
-        // baonhapvao.setVisibility(View.GONE);
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView6time = findViewById(R.id.recyclerview6time);
 
         dBsetting.addSetting(settingsql);
-//        if (checkPlayServices()) {
-//            // Building the GoogleApi client
-//            buildGoogleApiClient();
-//        }
         if (dBsetting.getAllSetting().get(0).getLanguage() == 1) {
             Tvdoam.setText("Humidity");
             Tvgioview.setText("Wind");
@@ -232,21 +222,15 @@ public class MainActivity extends AppCompatActivity{
                     @Override
                     public void onResponse(String response) {
                         try {
-                            // bóc tách json của thời tiết trong ngày (hình tròn)
                             JSON.JSONWEATHER(response, weathertt);
-
-//set tên của địa điểm
                             Tvplace.setText(weathertt.getDiadiem());
-// lấy giờ của địa điêm đấy tại thời điểm tìm kiếm
                             textView.setText(weathertt.getTimeweather());
 
-                            // check cài đặt để set đơn vị đo nhiệt độ
                             if (dBsetting.getAllSetting().get(0).getNhietdost() == 1) {
                                 Tvtemperature.setText((int) (weathertt.getNhietdo() * 1.8 + 32) + "");
                                 Imvdof.setImageResource(R.drawable.dof);
                             } else
                                 Tvtemperature.setText(weathertt.getNhietdo() + "");
-
 
 
                             if (dBsetting.getAllSetting().get(0).getLanguage() == 1) {
@@ -256,6 +240,7 @@ public class MainActivity extends AppCompatActivity{
 
                             Tvday.setText(weathertt.getDayweather());
 
+
                             if (dBsetting.getAllSetting().get(0).getTdgio() == 1) {
                                 Tvwind.setText(weathertt.getTocdogio() * 1.943844 + "mph/h");
                             } else {
@@ -264,7 +249,7 @@ public class MainActivity extends AppCompatActivity{
                                 } else
                                     Tvwind.setText(weathertt.getTocdogio() + "m/s");
                             }
-/// set Ngôn ngữ của text
+
                             if (dBsetting.getAllSetting().get(0).getLanguage() == 1) {
                                 Tvweather.setText(weathertt.getTrangthaithoitietweather());
                             } else Tvweather.setText(ttthoitiet.dich(weathertt.getIdWeather()));
@@ -336,7 +321,7 @@ public class MainActivity extends AppCompatActivity{
 
                             if (dBsetting.getAllSetting().get(0).getNhietdost() == 1) {
                                 for (int i = 0; i < contacts6time.size(); i++) {
-                                    contacts6time.get(i).setNhietdo(contacts6time.get(i).getNhietdo() - 1000);
+                                    contacts6time.get(i).setNhietdo(contacts6time.get(i).getNhietdo() -1000);
                                 }
                             }
 

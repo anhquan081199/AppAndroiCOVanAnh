@@ -40,7 +40,7 @@ public class AdapterContect6time extends RecyclerView.Adapter<AdapterContect6tim
     public void onBindViewHolder(@NonNull AdapterContect6time.Viewhoder6time holder, int position) {
         Contect contect = Contacts.get(position);
         if (contect.getNhietdo() < -700) {
-            int a = (int) ((contect.getNhietdo() + 1000) * 1.8 + 32);
+            int a = (int) ((contect.getNhietdo() +1000) * 1.8 + 32);
             contect.setNhietdo(a);
             holder.Tvcrc.setText("F");
 

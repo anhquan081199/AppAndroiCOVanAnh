@@ -62,8 +62,7 @@ public class DBsetting extends SQLiteOpenHelper {
 
 
     public ArrayList<setting> getAllSetting() {
-        ArrayList<setting> listStudent = new ArrayList<setting>();
-        // Select All Query
+        ArrayList<setting> listWeather = new ArrayList<setting>();
         String selectQuery = "SELECT  * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -76,12 +75,12 @@ public class DBsetting extends SQLiteOpenHelper {
               settingsql.setNhietdost(cursor.getInt(2));
                settingsql.setTdgio(cursor.getInt(3));
 
-                listStudent.add(settingsql);
+                listWeather.add(settingsql);
             } while (cursor.moveToNext());
         }
         cursor.close();
         db.close();
-        return listStudent;
+        return listWeather;
     }
 
     public int Updatelanguage(setting settingsql){
@@ -113,7 +112,5 @@ public class DBsetting extends SQLiteOpenHelper {
         return db.update(TABLE_NAME,values,ID +"=?",new String[] { String.valueOf(settingsql.getId())});
 
     }
-
-
 }
 

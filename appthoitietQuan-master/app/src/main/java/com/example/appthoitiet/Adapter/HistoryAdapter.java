@@ -18,7 +18,7 @@ import com.example.appthoitiet.Model.history;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends ArrayAdapter<history> {
+public class HistoryAdapter extends ArrayAdapter<history> {
 
     DBsetting dBsetting = new DBsetting(getContext());
     private Context context;
@@ -26,7 +26,7 @@ public class CustomAdapter extends ArrayAdapter<history> {
     private int resource;
     private convert convert= new convert();
 
-    public CustomAdapter(@NonNull Context context, int resource, @NonNull ArrayList<history> objects) {
+    public HistoryAdapter(@NonNull Context context, int resource, @NonNull ArrayList<history> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;

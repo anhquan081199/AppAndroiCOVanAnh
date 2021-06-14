@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.appthoitiet.Adapter.CustomAdapter;
+import com.example.appthoitiet.Adapter.HistoryAdapter;
 import com.example.appthoitiet.DBManage.DBHistory;
 import com.example.appthoitiet.DBManage.DBsetting;
 import com.example.appthoitiet.R;
@@ -56,8 +56,8 @@ public class Activity_Seting extends AppCompatActivity {
 
 
 
-        CustomAdapter customAdapter = new CustomAdapter(this, R.layout.item_lisview, historyArrayAdapter);
-        listView123.setAdapter(customAdapter);
+        HistoryAdapter historyAdapter = new HistoryAdapter(this, R.layout.item_lisview, historyArrayAdapter);
+        listView123.setAdapter(historyAdapter);
 
 
         listView123.setOnItemClickListener(new AdapterView.OnItemClickListener() {
